@@ -241,13 +241,15 @@ export function Contact() {
 
         <motion.div {...fadeUp} className="mt-10 flex justify-center gap-4">
           {[
-            { Icon: Instagram, href: "#", label: "Instagram" },
-            { Icon: Facebook, href: "#", label: "Facebook" },
-            { Icon: Twitter, href: "#", label: "Twitter" },
+            { Icon: Instagram, href: "https://www.instagram.com/brookstone.digitalsolutions/", label: "Instagram" },
+            { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583190211991", label: "Facebook" },
+            { Icon: Twitter, href: "https://x.com/BStone42646", label: "Twitter" },
           ].map(({ Icon, href, label }) => (
             <a
               key={label}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={label}
               className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_-10px_rgba(123,44,191,0.4)] transition-all hover:scale-110 hover:bg-gradient-brand hover:text-white"
             >
@@ -288,9 +290,9 @@ export function Footer() {
             <p className="mt-3 text-sm text-muted-foreground">📞 63810 76189</p>
             <p className="mt-1 text-sm text-muted-foreground">📍 Tiruppur, Tamil Nadu</p>
             <div className="mt-3 flex gap-3">
-              <a href="#" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
-              <a href="#" aria-label="Facebook" className="text-muted-foreground hover:text-brand-purple"><Facebook className="h-5 w-5" /></a>
-              <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-brand-purple"><Twitter className="h-5 w-5" /></a>
+              <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61583190211991" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-brand-purple"><Facebook className="h-5 w-5" /></a>
+              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-brand-purple"><Twitter className="h-5 w-5" /></a>
             </div>
           </div>
         </div>
