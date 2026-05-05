@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Brook Stone - Digital Marketing" },
+      { name: "description", content: "Grow your business with Brook Stone Digital Solutions. We offer SEO, social media marketing, Google Ads, and website development to boost your online presence" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Brook Stone - Digital Marketing" },
+      { property: "og:description", content: "Grow your business with Brook Stone Digital Solutions. We offer SEO, social media marketing, Google Ads, and website development to boost your online presence" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Brook Stone - Digital Marketing" },
+      { name: "twitter:description", content: "Grow your business with Brook Stone Digital Solutions. We offer SEO, social media marketing, Google Ads, and website development to boost your online presence" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd8e32e3-446b-43f7-9318-071ce7c47a16/id-preview-dc0571e2--f2ef0504-347c-4b56-b68c-137c359f40cc.lovable.app-1777973984574.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dd8e32e3-446b-43f7-9318-071ce7c47a16/id-preview-dc0571e2--f2ef0504-347c-4b56-b68c-137c359f40cc.lovable.app-1777973984574.png" },
     ],
     links: [
       {
