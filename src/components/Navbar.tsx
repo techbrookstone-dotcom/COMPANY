@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import logo from "@/assets/brookstone-logo.jpeg";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#why", label: "Why Us" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why", label: "Why Us" },
+  { href: "/pricing", label: "Pricing", route: true },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Navbar() {
