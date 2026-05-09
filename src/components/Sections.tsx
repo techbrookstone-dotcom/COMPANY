@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 import {
   Share2, Search, MousePointerClick, Code2, Sparkles, PenTool,
-  BarChart3, Wallet, Zap, Heart, Phone, MapPin, Instagram, Facebook, Twitter, ArrowRight,
+  BarChart3, Wallet, Zap, Heart, Phone, MapPin, Instagram, Facebook, ArrowRight,
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
+
+// X (formerly Twitter) brand icon
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -25,7 +34,7 @@ export function Hero() {
           {...fadeUp}
           src={logo}
           alt="Brook Stone Digital Solutions"
-          className="mx-auto mb-8 h-28 w-28 rounded-2xl object-cover shadow-brand"
+          className="mx-auto mb-8 h-44 w-44 rounded-3xl object-cover shadow-brand sm:h-52 sm:w-52 md:h-60 md:w-60"
         />
         <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
           <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
@@ -239,11 +248,25 @@ export function Contact() {
           </motion.div>
         </div>
 
+        {/* Live map */}
+        <motion.div {...fadeUp} className="mt-8 overflow-hidden rounded-2xl shadow-brand gradient-border">
+          <iframe
+            title="Brook Stone Digital Solutions location"
+            src="https://www.google.com/maps?q=402B+3rd+Street+Kallakadu+Veerapandi+Tiruppur&output=embed"
+            width="100%"
+            height="320"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ border: 0, display: "block" }}
+            allowFullScreen
+          />
+        </motion.div>
+
         <motion.div {...fadeUp} className="mt-10 flex justify-center gap-4">
           {[
             { Icon: Instagram, href: "https://www.instagram.com/brookstone.digitalsolutions/", label: "Instagram" },
             { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583190211991", label: "Facebook" },
-            { Icon: Twitter, href: "https://x.com/BStone42646", label: "Twitter" },
+            { Icon: XIcon, href: "https://x.com/BStone42646", label: "X" },
           ].map(({ Icon, href, label }) => (
             <a
               key={label}
@@ -292,7 +315,7 @@ export function Footer() {
             <div className="mt-3 flex gap-3">
               <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
               <a href="https://www.facebook.com/profile.php?id=61583190211991" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-brand-purple"><Facebook className="h-5 w-5" /></a>
-              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-brand-purple"><Twitter className="h-5 w-5" /></a>
+              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-muted-foreground hover:text-brand-purple"><XIcon className="h-5 w-5" /></a>
             </div>
           </div>
         </div>
