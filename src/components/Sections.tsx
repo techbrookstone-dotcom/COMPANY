@@ -252,7 +252,7 @@ export function Contact() {
           {[
             { Icon: Instagram, href: "https://www.instagram.com/brookstone.digitalsolutions/", label: "Instagram" },
             { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583190211991", label: "Facebook" },
-            { Icon: XIcon, href: "https://x.com/BStone42646", label: "Twitter" },
+            { Icon: XIcon, href: "https://x.com/BStone42646", label: "X" },
           ].map(({ Icon, href, label }) => (
             <a
               key={label}
@@ -301,7 +301,7 @@ export function Footer() {
             <div className="mt-3 flex gap-3">
               <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
               <a href="https://www.facebook.com/profile.php?id=61583190211991" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-brand-purple"><Facebook className="h-5 w-5" /></a>
-              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-brand-purple"><XIcon className="h-5 w-5" /></a>
+              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-muted-foreground hover:text-brand-purple"><XIcon className="h-5 w-5" /></a>
             </div>
           </div>
         </div>
