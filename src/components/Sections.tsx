@@ -248,6 +248,20 @@ export function Contact() {
           </motion.div>
         </div>
 
+        {/* Live map */}
+        <motion.div {...fadeUp} className="mt-8 overflow-hidden rounded-2xl shadow-brand gradient-border">
+          <iframe
+            title="Brook Stone Digital Solutions location"
+            src="https://www.google.com/maps?q=402B+3rd+Street+Kallakadu+Veerapandi+Tiruppur&output=embed"
+            width="100%"
+            height="320"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ border: 0, display: "block" }}
+            allowFullScreen
+          />
+        </motion.div>
+
         <motion.div {...fadeUp} className="mt-10 flex justify-center gap-4">
           {[
             { Icon: Instagram, href: "https://www.instagram.com/brookstone.digitalsolutions/", label: "Instagram" },
