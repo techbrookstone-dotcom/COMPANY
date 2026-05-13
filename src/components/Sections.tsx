@@ -268,7 +268,7 @@ export function Contact() {
         <div className="grid gap-6 md:grid-cols-2">
           <motion.a
             {...fadeUp}
-            href="tel:6381076189"
+            href="tel:+916381076189"
             className="gradient-border flex items-start gap-4 p-7 transition-transform hover:-translate-y-1"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-purple text-white">
@@ -276,7 +276,7 @@ export function Contact() {
             </div>
             <div>
               <h3 className="font-bold">Phone</h3>
-              <p className="mt-1 text-muted-foreground">63810 76189</p>
+              <p className="mt-1 text-muted-foreground">+91 63810 76189</p>
             </div>
           </motion.a>
 
@@ -355,7 +355,7 @@ export function Footer() {
           </div>
           <div>
             <h4 className="font-semibold">Connect</h4>
-            <p className="mt-3 text-sm text-muted-foreground">📞 63810 76189</p>
+            <p className="mt-3 text-sm text-muted-foreground">📞 +91 63810 76189</p>
             <p className="mt-1 text-sm text-muted-foreground">📍 Tiruppur, Tamil Nadu</p>
             <div className="mt-3 flex gap-3">
               <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
