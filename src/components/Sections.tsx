@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {
   Share2, Search, MousePointerClick, Code2, Sparkles, PenTool,
   BarChart3, Wallet, Zap, Heart, Phone, MapPin, Instagram, Facebook, ArrowRight,
+  ChevronLeft, ChevronRight, Pause, Play,
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
 import banner1 from "@/assets/banner-1.jpeg";
