@@ -19,13 +19,13 @@ function HeroBannerSlider() {
   }, []);
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative mx-auto mb-10 w-full max-w-5xl overflow-hidden rounded-3xl shadow-brand"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="relative mb-10 w-screen left-1/2 -translate-x-1/2 overflow-hidden h-screen"
     >
       <div
-        className="flex transition-transform duration-700 ease-out"
+        className="flex h-full transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {banners.map((src, i) => (
@@ -33,11 +33,11 @@ function HeroBannerSlider() {
             key={i}
             src={src}
             alt={`Brook Stone banner ${i + 1}`}
-            className="aspect-[1600/500] w-full flex-shrink-0 object-cover"
+            className="h-full w-screen flex-shrink-0 object-cover"
           />
         ))}
       </div>
-      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
         {banners.map((_, i) => (
           <button
             key={i}
@@ -78,12 +78,6 @@ export function Hero() {
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-[80%] -translate-x-1/2 rounded-full bg-gradient-brand opacity-10 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <motion.img
-          {...fadeUp}
-          src={logo}
-          alt="Brook Stone Digital Solutions"
-          className="mx-auto mb-8 h-44 w-44 rounded-3xl object-cover shadow-brand sm:h-52 sm:w-52 md:h-60 md:w-60"
-        />
         <HeroBannerSlider />
         <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
           <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
@@ -160,10 +154,12 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="services" className="relative overflow-hidden bg-[oklch(0.16_0.04_280)] py-20 text-white md:py-28">
+      <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-brand-purple/30 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-brand-blue/30 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <motion.div {...fadeUp} className="mx-auto mb-14 max-w-2xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple">Services</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple-light">Services</p>
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Everything you need to <span className="text-gradient-brand">scale</span>
           </h2>
@@ -176,13 +172,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="gradient-border group p-7 transition-transform hover:-translate-y-2"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur transition-all hover:-translate-y-2 hover:border-brand-purple-light/50 hover:bg-white/10"
             >
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-brand text-white shadow-brand">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <h3 className="text-lg font-bold text-white">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -272,7 +268,7 @@ export function Contact() {
         <div className="grid gap-6 md:grid-cols-2">
           <motion.a
             {...fadeUp}
-            href="tel:6381076189"
+            href="tel:+916381076189"
             className="gradient-border flex items-start gap-4 p-7 transition-transform hover:-translate-y-1"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-purple text-white">
@@ -280,7 +276,7 @@ export function Contact() {
             </div>
             <div>
               <h3 className="font-bold">Phone</h3>
-              <p className="mt-1 text-muted-foreground">63810 76189</p>
+              <p className="mt-1 text-muted-foreground">+91 63810 76189</p>
             </div>
           </motion.a>
 
@@ -359,7 +355,7 @@ export function Footer() {
           </div>
           <div>
             <h4 className="font-semibold">Connect</h4>
-            <p className="mt-3 text-sm text-muted-foreground">📞 63810 76189</p>
+            <p className="mt-3 text-sm text-muted-foreground">📞 +91 63810 76189</p>
             <p className="mt-1 text-sm text-muted-foreground">📍 Tiruppur, Tamil Nadu</p>
             <div className="mt-3 flex gap-3">
               <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
