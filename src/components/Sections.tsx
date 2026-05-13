@@ -78,12 +78,6 @@ export function Hero() {
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-[80%] -translate-x-1/2 rounded-full bg-gradient-brand opacity-10 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <motion.img
-          {...fadeUp}
-          src={logo}
-          alt="Brook Stone Digital Solutions"
-          className="mx-auto mb-8 h-44 w-44 rounded-3xl object-cover shadow-brand sm:h-52 sm:w-52 md:h-60 md:w-60"
-        />
         <HeroBannerSlider />
         <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
           <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
