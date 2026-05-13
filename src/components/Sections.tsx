@@ -1,9 +1,57 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   Share2, Search, MousePointerClick, Code2, Sparkles, PenTool,
   BarChart3, Wallet, Zap, Heart, Phone, MapPin, Instagram, Facebook, ArrowRight,
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
+import banner1 from "@/assets/banner-1.jpeg";
+import banner2 from "@/assets/banner-2.jpeg";
+import banner3 from "@/assets/banner-3.jpeg";
+
+const banners = [banner1, banner2, banner3];
+
+function HeroBannerSlider() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % banners.length), 4000);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="relative mx-auto mb-10 w-full max-w-5xl overflow-hidden rounded-3xl shadow-brand"
+    >
+      <div
+        className="flex transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {banners.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Brook Stone banner ${i + 1}`}
+            className="aspect-[1600/500] w-full flex-shrink-0 object-cover"
+          />
+        ))}
+      </div>
+      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+        {banners.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`h-2 rounded-full transition-all ${
+              i === index ? "w-8 bg-white" : "w-2 bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </motion.div>
+  );
+}
 
 // X (formerly Twitter) brand icon
 function XIcon({ className }: { className?: string }) {
