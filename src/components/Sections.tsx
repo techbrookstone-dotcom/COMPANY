@@ -154,10 +154,12 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="services" className="relative overflow-hidden bg-[oklch(0.16_0.04_280)] py-20 text-white md:py-28">
+      <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-brand-purple/30 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-brand-blue/30 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <motion.div {...fadeUp} className="mx-auto mb-14 max-w-2xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple">Services</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple-light">Services</p>
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Everything you need to <span className="text-gradient-brand">scale</span>
           </h2>
@@ -170,13 +172,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="gradient-border group p-7 transition-transform hover:-translate-y-2"
+              className="group rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur transition-all hover:-translate-y-2 hover:border-brand-purple-light/50 hover:bg-white/10"
             >
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-brand text-white shadow-brand">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              <h3 className="text-lg font-bold text-white">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">{s.desc}</p>
             </motion.div>
           ))}
         </div>
