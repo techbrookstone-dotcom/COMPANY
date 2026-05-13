@@ -14,17 +14,20 @@ const banners = [banner1, banner2, banner3];
 
 function HeroBannerSlider() {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const count = banners.length;
+
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % banners.length), 4000);
+    if (paused) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % count), 5000);
     return () => clearInterval(id);
-  }, []);
+  }, [paused, count]);
+
+  const prev = () => setIndex((i) => (i - 1 + count) % count);
+  const next = () => setIndex((i) => (i + 1) % count);
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="relative mb-10 w-screen left-1/2 -translate-x-1/2 overflow-hidden h-screen"
-    >
+    <div className="relative w-full overflow-hidden h-[70vh] min-h-[480px] sm:h-[80vh] md:h-screen">
       <div
         className="flex h-full transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
@@ -34,23 +37,85 @@ function HeroBannerSlider() {
             key={i}
             src={src}
             alt={`Brook Stone banner ${i + 1}`}
-            className="h-full w-screen flex-shrink-0 object-cover"
+            className="h-full w-full flex-shrink-0 object-cover object-center"
           />
         ))}
       </div>
-      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
-        {banners.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-2 rounded-full transition-all ${
-              i === index ? "w-8 bg-white" : "w-2 bg-white/50"
-            }`}
-          />
-        ))}
+
+      {/* Gradient overlay for legibility */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/40 md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
+
+      {/* Headline + CTA overlay */}
+      <div className="absolute inset-0 flex items-center">
+        <div className="mx-auto w-full max-w-6xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-2xl text-center md:text-left"
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5" />
+              Smart Digital Marketing Agency
+            </span>
+            <h1 className="mt-5 text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              Grow Your Business with{" "}
+              <span className="text-gradient-brand">Smart Digital Marketing</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-base text-white/85 sm:text-lg md:mx-0 mx-auto">
+              We help brands scale with creative strategies and data-driven solutions.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+              <a href="#contact" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-semibold text-white shadow-brand transition-transform hover:scale-105">
+                Get Started <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a href="https://wa.me/916381076189" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-all hover:bg-white hover:text-brand-purple">
+                Book a Free Call
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </motion.div>
+
+      {/* Prev / Next */}
+      <button
+        onClick={prev}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/30 sm:left-5 sm:h-12 sm:w-12"
+      >
+        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+      </button>
+      <button
+        onClick={next}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/30 sm:right-5 sm:h-12 sm:w-12"
+      >
+        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+      </button>
+
+      {/* Pause / Play + dots */}
+      <div className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 items-center gap-3">
+        <button
+          onClick={() => setPaused((p) => !p)}
+          aria-label={paused ? "Play slideshow" : "Pause slideshow"}
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/30"
+        >
+          {paused ? <Play className="h-4 w-4" /> : <Pause className="h-4 w-4" />}
+        </button>
+        <div className="flex items-center gap-2">
+          {banners.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-2 rounded-full transition-all ${
+                i === index ? "w-8 bg-white" : "w-2 bg-white/50"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -72,34 +137,8 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
-      {/* decorative blobs */}
-      <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-brand-purple-light/30 blur-3xl" />
-      <div className="pointer-events-none absolute -top-20 -right-32 h-96 w-96 rounded-full bg-brand-blue-light/30 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-[80%] -translate-x-1/2 rounded-full bg-gradient-brand opacity-10 blur-3xl" />
-
-      <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <HeroBannerSlider />
-        <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
-          <Sparkles className="h-3.5 w-3.5 text-brand-purple" />
-          Smart Digital Marketing Agency
-        </motion.div>
-        <motion.h1 {...fadeUp} transition={{ duration: 0.7, delay: 0.15 }} className="mx-auto max-w-4xl text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">
-          Grow Your Business with{" "}
-          <span className="text-gradient-brand">Smart Digital Marketing</span>
-        </motion.h1>
-        <motion.p {...fadeUp} transition={{ duration: 0.6, delay: 0.25 }} className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          We help brands scale with creative strategies and data-driven solutions.
-        </motion.p>
-        <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.35 }} className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a href="#contact" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-semibold text-white shadow-brand transition-transform hover:scale-105">
-            Get Started <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a href="#contact" className="inline-flex items-center gap-2 rounded-full border-2 border-brand-purple/30 bg-white/70 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur transition-all hover:border-brand-purple hover:bg-white">
-            Contact Us
-          </a>
-        </motion.div>
-      </div>
+    <section id="home" className="relative">
+      <HeroBannerSlider />
     </section>
   );
 }
