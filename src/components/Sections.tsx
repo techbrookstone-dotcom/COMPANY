@@ -19,13 +19,13 @@ function HeroBannerSlider() {
   }, []);
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative mx-auto mb-10 w-full max-w-5xl overflow-hidden rounded-3xl shadow-brand"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+      className="relative mb-10 w-screen left-1/2 -translate-x-1/2 overflow-hidden h-screen"
     >
       <div
-        className="flex transition-transform duration-700 ease-out"
+        className="flex h-full transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {banners.map((src, i) => (
@@ -33,11 +33,11 @@ function HeroBannerSlider() {
             key={i}
             src={src}
             alt={`Brook Stone banner ${i + 1}`}
-            className="aspect-[1600/500] w-full flex-shrink-0 object-cover"
+            className="h-full w-screen flex-shrink-0 object-cover"
           />
         ))}
       </div>
-      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
         {banners.map((_, i) => (
           <button
             key={i}
