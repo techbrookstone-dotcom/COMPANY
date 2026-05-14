@@ -27,9 +27,9 @@ function HeroBannerSlider() {
   const next = () => setIndex((i) => (i + 1) % count);
 
   return (
-    <div className="relative w-full overflow-hidden h-[70vh] min-h-[480px] sm:h-[80vh] md:h-screen">
+    <div className="relative w-full overflow-hidden bg-black aspect-[16/9] max-h-screen">
       <div
-        className="flex h-full transition-transform duration-700 ease-out"
+        className="flex h-full w-full transition-transform duration-700 ease-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {banners.map((src, i) => (
@@ -37,44 +37,9 @@ function HeroBannerSlider() {
             key={i}
             src={src}
             alt={`Brook Stone banner ${i + 1}`}
-            className="h-full w-full flex-shrink-0 object-cover object-center"
+            className="h-full w-full flex-shrink-0 object-contain"
           />
         ))}
-      </div>
-
-      {/* Gradient overlay for legibility */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/40 md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
-
-      {/* Headline + CTA overlay */}
-      <div className="absolute inset-0 flex items-center">
-        <div className="mx-auto w-full max-w-6xl px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-2xl text-center md:text-left"
-          >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5" />
-              Smart Digital Marketing Agency
-            </span>
-            <h1 className="mt-5 text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-              Grow Your Business with{" "}
-              <span className="text-gradient-brand">Smart Digital Marketing</span>
-            </h1>
-            <p className="mt-5 max-w-xl text-base text-white/85 sm:text-lg md:mx-0 mx-auto">
-              We help brands scale with creative strategies and data-driven solutions.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <a href="#contact" className="group inline-flex items-center gap-2 rounded-full bg-gradient-brand px-7 py-3.5 text-sm font-semibold text-white shadow-brand transition-transform hover:scale-105">
-                Get Started <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-              <a href="https://wa.me/916381076189" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-all hover:bg-white hover:text-brand-purple">
-                Book a Free Call
-              </a>
-            </div>
-          </motion.div>
-        </div>
       </div>
 
       {/* Prev / Next */}
