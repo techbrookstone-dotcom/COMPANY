@@ -119,12 +119,12 @@ export function About() {
               We craft <span className="text-gradient-brand">infinite</span> growth for ambitious brands.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Brook Stone Digital Solutions is a growth-focused agency blending creativity with analytics.
-              We partner with startups and established brands to design strategies that turn clicks into customers — and customers into communities.
-            </p>
+              Brook Stone Digital Solutions is a growth-focused digital marketing company in Tiruppur, blending creativity with analytics. 
+              We partner with startups and established businesses to design strategies that turn clicks into customers and customers into loyal communities.
+              </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              From bold campaigns to high-converting websites, our team delivers measurable results that move your business forward.
-            </p>
+              From SEO services and Google Ads management to social media marketing and website development, our team helps businesses in Tiruppur achieve measurable online growth and generate quality leads.
+              </p>
           </motion.div>
           <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.15 }} className="relative">
             <div className="absolute inset-0 rounded-3xl bg-gradient-brand opacity-20 blur-2xl" />
@@ -245,7 +245,7 @@ export function CTABanner() {
           Let's Grow Your Business Together 🚀
         </h2>
         <p className="relative mx-auto mt-4 max-w-xl text-white/90">
-          Ready to take the next step? Let's talk strategy, design, and growth.
+        Looking for a trusted digital marketing company in Tiruppur? We help businesses grow through SEO, Google Ads, social media marketing, and website development.
         </p>
         <a
           href="#contact"
