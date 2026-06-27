@@ -6,9 +6,9 @@ import {
   ChevronLeft, ChevronRight, Pause, Play,
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
-import banner1 from "@/assets/banner-1.jpeg";
-import banner2 from "@/assets/banner-2.jpeg";
-import banner3 from "@/assets/banner-3.jpeg";
+import banner1 from "@/assets/no1-digital-marketing-company-tiruppur.jpg";
+import banner2 from "@/assets/google-ads-management-tiruppur.jpg";
+import banner3 from "@/assets/best-digital-marketing-company-tiruppur.jpg";
 
 const banners = [banner1, banner2, banner3];
 
