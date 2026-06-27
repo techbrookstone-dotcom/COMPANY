@@ -370,7 +370,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Brook Stone Digital Solutions. All rights reserved. TEST
+          © {new Date().getFullYear()} Brook Stone Digital Solutions. All rights reserved. 
         </div>
       </div>
     </footer>
