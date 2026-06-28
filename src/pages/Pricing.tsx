@@ -76,7 +76,7 @@ const toneClasses: Record<Plan["tone"], string> = {
 
 export default function Pricing() {
   const waMsg = (plan: string) =>
-    `https://wa.me/916381076189?text=${encodeURIComponent(`Hi! I'm interested in the ${plan}.`)}`;
+    `https://wa.me/916383624245?text=${encodeURIComponent(`Hi! I'm interested in the ${plan}.`)}`;
 
   return (
     <div className="min-h-screen">
