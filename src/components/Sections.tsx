@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
 import banner1 from "@/assets/no1-digital-marketing-company-tiruppur.jpeg";
-import banner2 from "@/assets/google-ads-management-tiruppur.jpeg";
+import banner2 from "@/assets/google-ads-management-website-development-tiruppur.jpeg";
 import banner3 from "@/assets/best-digital-marketing-company-tiruppur.jpeg";
 
 const banners = [banner1, banner2, banner3];
