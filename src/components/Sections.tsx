@@ -109,15 +109,46 @@ export function Hero() {
     <section id="home" className="relative">
       <HeroBannerSlider />
 
-      {/* SEO Content */}
-      <div className="sr-only">
-        <h1>Digital Marketing Company in Tiruppur</h1>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/45"></div>
 
-        <p>
-          Brook Stone Digital Solutions is a leading Digital Marketing Company in Tiruppur
-          providing SEO Services, Google Ads, Meta Ads, Website Development and
-          Social Media Marketing to help businesses grow online.
-        </p>
+      {/* Hero Content */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+        <div className="max-w-4xl text-center text-white">
+
+          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+            Digital Marketing Company in Tiruppur
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200 md:text-xl">
+            Brook Stone Digital Solutions helps businesses grow with
+            <strong> SEO</strong>,
+            <strong> Google Ads</strong>,
+            <strong> Website Development</strong> and
+            <strong> Social Media Marketing</strong>.
+          </p>
+
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+
+            <a
+              href="tel:+916383624245"
+              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
+            >
+              Call Now
+            </a>
+
+            <a
+              href="https://wa.me/916383624245"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black"
+            >
+              WhatsApp Us
+            </a>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );
