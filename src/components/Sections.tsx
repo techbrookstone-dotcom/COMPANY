@@ -11,7 +11,11 @@ import banner2 from "@/assets/google-ads-management-website-development-tiruppur
 import banner3 from "@/assets/best-digital-marketing-company-tiruppur.jpeg";
 
 const banners = [banner1, banner2, banner3];
-
+const altTexts = [
+  "Digital Marketing Company in Tiruppur",
+  "SEO and Website Development Services in Tiruppur",
+  "Best Digital Marketing Agency in Tiruppur",
+]; 
 function HeroBannerSlider() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -36,7 +40,7 @@ function HeroBannerSlider() {
           <img
             key={i}
             src={src}
-            alt={`Brook Stone banner ${i + 1}`}
+            alt={altTexts[i]}
             className="h-full w-full flex-shrink-0 object-contain"
           />
         ))}
@@ -104,6 +108,17 @@ export function Hero() {
   return (
     <section id="home" className="relative">
       <HeroBannerSlider />
+
+      {/* SEO Content */}
+      <div className="sr-only">
+        <h1>Digital Marketing Company in Tiruppur</h1>
+
+        <p>
+          Brook Stone Digital Solutions is a leading Digital Marketing Company in Tiruppur
+          providing SEO Services, Google Ads, Meta Ads, Website Development and
+          Social Media Marketing to help businesses grow online.
+        </p>
+      </div>
     </section>
   );
 }
