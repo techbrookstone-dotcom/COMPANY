@@ -108,52 +108,43 @@ export function Hero() {
   return (
     <section id="home" className="relative">
       <HeroBannerSlider />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/45"></div>
-
-      {/* Hero Content */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
-        <div className="max-w-4xl text-center text-white">
-
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
-            Digital Marketing Company in Tiruppur
-          </h1>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-200 md:text-xl">
-            Brook Stone Digital Solutions helps businesses grow with
-            <strong> SEO</strong>,
-            <strong> Google Ads</strong>,
-            <strong> Website Development</strong> and
-            <strong> Social Media Marketing</strong>.
-          </p>
-
-          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-
-            <a
-              href="tel:+916383624245"
-              className="rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
-            >
-              Call Now
-            </a>
-
-            <a
-              href="https://wa.me/916383624245"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-xl border border-white px-8 py-4 font-semibold text-white transition hover:bg-white hover:text-black"
-            >
-              WhatsApp Us
-            </a>
-
-          </div>
-
-        </div>
-      </div>
     </section>
   );
 }
+<section className="bg-background py-16">
+  <div className="mx-auto max-w-6xl px-6 text-center">
 
+    <h1 className="text-4xl font-bold sm:text-5xl">
+      Digital Marketing Company in Tiruppur
+    </h1>
+
+    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+      Brook Stone Digital Solutions helps businesses in Tiruppur grow online
+      through SEO, Google Ads, Meta Ads, Website Development and Social Media
+      Marketing. We create result-driven digital marketing strategies that
+      increase traffic, generate quality leads and improve business growth.
+    </p>
+
+    <div className="mt-8 flex flex-wrap justify-center gap-3">
+      <span className="rounded-full border px-4 py-2">
+        SEO Services
+      </span>
+
+      <span className="rounded-full border px-4 py-2">
+        Google Ads
+      </span>
+
+      <span className="rounded-full border px-4 py-2">
+        Website Development
+      </span>
+
+      <span className="rounded-full border px-4 py-2">
+        Social Media Marketing
+      </span>
+    </div>
+
+  </div>
+</section>
 export function About() {
   return (
     <section id="about" className="py-20 md:py-28">
