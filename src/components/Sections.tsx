@@ -167,11 +167,11 @@ export function About() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-brand opacity-20 blur-2xl" />
             <div className="relative grid grid-cols-2 gap-4">
               {[
-                { k: "150+", v: "Projects Delivered" },
-                { k: "98%", v: "Client Retention" },
-                { k: "5x", v: "Avg. ROI Growth" },
+                { k: "40+", v: "Projects Delivered" },
+                { k: "20+", v: "Happy Clients" },
+                { k: "2x", v: "Average ROI Growth" },
                 { k: "24/7", v: "Support" },
-              ].map((s) => (
+               ].map((s) => (
                 <div key={s.v} className="gradient-border p-6 text-center">
                   <div className="text-3xl font-bold text-gradient-brand">{s.k}</div>
                   <div className="mt-1 text-xs text-muted-foreground">{s.v}</div>
