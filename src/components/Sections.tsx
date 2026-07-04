@@ -106,45 +106,75 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section id="home" className="relative">
-      <HeroBannerSlider />
+    <section id="home" className="relative h-screen overflow-hidden">
+      {/* Banner Slider */}
+      {/* Premium Animated Background */}
+<div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#1e3a8a]">
+
+  {/* Glow 1 */}
+  <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl animate-pulse"></div>
+
+  {/* Glow 2 */}
+  <div className="absolute right-10 bottom-20 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl animate-pulse"></div>
+
+  {/* Glow 3 */}
+  <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-3xl"></div>
+
+</div>
+
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020617]/90 via-[#0f172a]/70 to-[#1e3a8a]/40 z-10" />
+
+      {/* Hero Content */}
+      <div className="absolute inset-0 z-20 flex items-center">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl">
+
+            <span className="mb-4 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
+              🚀 Grow Your Business with Brook Stone
+            </span>
+
+            <h1 className="text-5xl font-extrabold leading-tight text-white md:text-7xl">
+              Digital Marketing <br />
+              Company in{" "}
+              <span className="text-blue-400">
+                Tiruppur
+              </span>
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+              We help businesses generate more leads and sales through
+              <strong> SEO</strong>,
+              <strong> Google Ads</strong>,
+              <strong> Meta Ads</strong>,
+              <strong> Website Development</strong> and
+              <strong> Social Media Marketing</strong>.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700"
+              >
+                Get Free Consultation
+              </a>
+
+              <a
+                href="https://wa.me/916383624245"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition duration-300 hover:bg-white hover:text-black"
+              >
+                WhatsApp Us
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
-<section className="bg-background py-16">
-  <div className="mx-auto max-w-6xl px-6 text-center">
-
-    <h1 className="text-4xl font-bold sm:text-5xl">
-      Digital Marketing Company in Tiruppur
-    </h1>
-
-    <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-      Brook Stone Digital Solutions helps businesses in Tiruppur grow online
-      through SEO, Google Ads, Meta Ads, Website Development and Social Media
-      Marketing. We create result-driven digital marketing strategies that
-      increase traffic, generate quality leads and improve business growth.
-    </p>
-
-    <div className="mt-8 flex flex-wrap justify-center gap-3">
-      <span className="rounded-full border px-4 py-2">
-        SEO Services
-      </span>
-
-      <span className="rounded-full border px-4 py-2">
-        Google Ads
-      </span>
-
-      <span className="rounded-full border px-4 py-2">
-        Website Development
-      </span>
-
-      <span className="rounded-full border px-4 py-2">
-        Social Media Marketing
-      </span>
-    </div>
-
-  </div>
-</section>
 export function About() {
   return (
     <section id="about" className="py-20 md:py-28">
