@@ -135,7 +135,7 @@ export function Hero() {
               🚀 Trusted by 40+ Businesses in Tamil Nadu
             </span>
 
-            <h1 className="text-5xl font-extrabold leading-tight text-white md:text-7xl">
+            <h1 className="text-2xl font-extrabold leading-tight text-white md:text-4xl">
   Grow Your Business with <br />
   <span className="text-blue-400">Digital Marketing</span> <br />
   That Delivers Results
