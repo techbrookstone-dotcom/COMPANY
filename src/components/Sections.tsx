@@ -173,10 +173,10 @@ export function Hero() {
           </div>
           <div className="hidden lg:flex items-center justify-center">
   <img
-    src={heroImage}
-    alt="Digital Marketing Illustration"
-    className="w-full max-w-xl drop-shadow-2xl"
-  />
+  src={heroImage}
+  alt="Digital Marketing Illustration"
+  className="w-full max-w-2xl drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
+/>
 </div>
         </div>
       </div>
