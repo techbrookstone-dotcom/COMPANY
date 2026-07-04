@@ -25,21 +25,24 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-xl shadow-sm" : "bg-transparent"
+       scrolled? "bg-slate-900/70 backdrop-blur-2xl border-b border-white/10 shadow-2xl" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <a href="/#home" className="flex items-center gap-2">
-          <img src={logo} alt="Brook Stone" className="h-12 w-12 rounded-full object-cover" />
+        <a href="/#home"
+         className="flex items-center gap-2 transition-transform duration-300 hover:scale-105">
+          <img src={logo} alt="Brook Stone" className="h-12 w-12 rounded-full object-cover ring-2 ring-blue-500/30" />
           <span className="font-display text-lg font-bold text-gradient-brand">Brook Stone</span>
         </a>
         <ul className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               {l.route ? (
-                <Link to={l.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }}>
-                  {l.label}
-                </Link>
+              <Link
+               to={l.href}
+               className="text-sm font-medium text-white/80 transition-all duration-300 hover:text-white">
+               {l.label}
+              </Link>
               ) : (
                 <a href={l.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
                   {l.label}

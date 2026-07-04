@@ -132,25 +132,23 @@ export function Hero() {
           <div className="max-w-3xl">
 
             <span className="mb-4 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
-              🚀 Grow Your Business with Brook Stone
+              🚀 Trusted by 40+ Businesses in Tamil Nadu
             </span>
 
             <h1 className="text-5xl font-extrabold leading-tight text-white md:text-7xl">
-              Digital Marketing <br />
-              Company in{" "}
-              <span className="text-blue-400">
-                Tiruppur
-              </span>
-            </h1>
+  Grow Your Business with <br />
+  <span className="text-blue-400">Digital Marketing</span> <br />
+  That Delivers Results
+</h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
-              We help businesses generate more leads and sales through
-              <strong> SEO</strong>,
-              <strong> Google Ads</strong>,
-              <strong> Meta Ads</strong>,
-              <strong> Website Development</strong> and
-              <strong> Social Media Marketing</strong>.
-            </p>
+  Brook Stone Digital Solutions helps businesses increase leads, sales and brand visibility through
+  <strong> SEO</strong>,
+  <strong> Google Ads</strong>,
+  <strong> Meta Ads</strong>,
+  <strong> Website Development</strong> and
+  <strong> Social Media Marketing</strong>.
+</p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -161,13 +159,11 @@ export function Hero() {
               </a>
 
               <a
-                href="https://wa.me/916383624245"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition duration-300 hover:bg-white hover:text-black"
-              >
-                WhatsApp Us
-              </a>
+  href="#services"
+  className="rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition duration-300 hover:bg-white hover:text-black"
+>
+  View Our Services
+</a>
             </div>
 
           </div>
