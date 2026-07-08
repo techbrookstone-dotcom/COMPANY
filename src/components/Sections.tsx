@@ -127,7 +127,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#020617]/90 via-[#0f172a]/70 to-[#1e3a8a]/40 z-10" />
 
       {/* Hero Content */}
-      <div className="absolute inset-0 z-20 flex items-center">
+      <div className="absolute inset-0 z-20 flex items-center pt-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="max-w-xl">
 
@@ -135,7 +135,7 @@ export function Hero() {
               🚀 Trusted by 40+ Businesses in Tamil Nadu
             </span>
 
-            <h1 className="max-w-xl text-3xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="max-w-xl text-3xl font-bold leading-tight text-white text-3xl md:text-4xl lg:text-5xl">
   Grow Your Business with <br />
   <span className="text-blue-400">Digital Marketing</span> <br />
   That Delivers Results
@@ -171,7 +171,7 @@ export function Hero() {
   <img
   src={heroImage}
   alt="Digital Marketing Illustration"
-  className="w-full max-w-lg xl:max-w-xl drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
+  className="w-full max-w-md xl:max-w-lg drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
 />
 </div>
         </div>
