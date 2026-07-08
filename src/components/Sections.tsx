@@ -189,7 +189,7 @@ export function About() {
              Helping Businesses Grow with
              <span className="text-gradient-brand"> Smart Digital Marketing</span>
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
+            <p className="mt-8 max-w-xl text-base leading-8 text-muted-foreground">
               Brook Stone Digital Solutions is a growth-focused digital marketing company in Tiruppur, blending creativity with analytics. 
               We partner with startups and established businesses to design strategies that turn clicks into customers and customers into loyal communities.
               </p>
@@ -206,7 +206,7 @@ export function About() {
                 { k: "100%", v: "Custom Strategies" },
                 { k: "24/7", v: "Dedicated Support" },
                 ].map((s) => (
-                <div key={s.v} className="gradient-border p-6 text-center">
+                <div key={s.v} className="gradient-border rounded-2xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                   <div className="text-3xl font-bold text-gradient-brand">{s.k}</div>
                   <div className="mt-1 text-xs text-muted-foreground">{s.v}</div>
                 </div>
@@ -233,10 +233,10 @@ export function Services() {
     <section id="services" className="relative overflow-hidden bg-[oklch(0.16_0.04_280)] py-20 text-white md:py-28">
       <div className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full bg-brand-purple/30 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-20 h-96 w-96 rounded-full bg-brand-blue/30 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6">
         <motion.div {...fadeUp} className="mx-auto mb-14 max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple-light">Services</p>
-          <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
            Digital Marketing Services That
            <span className="text-gradient-brand"> Drive Real Business Growth</span>
           </h2>
