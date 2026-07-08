@@ -7,7 +7,7 @@ const links = [
   { href: "/#home", label: "Home" },
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
-  { href: "/#why", label: "Why Us" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/pricing", label: "Pricing", route: true },
   { href: "/#contact", label: "Contact" },
 ];
@@ -44,9 +44,11 @@ export function Navbar() {
                {l.label}
               </Link>
               ) : (
-                <a href={l.href} className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground">
+                <a href={l.href}
+                  className="text-sm font-medium text-white/80 transition-all duration-300 hover:text-blue-400" >
                   {l.label}
                 </a>
+              
               )}
             </li>
           ))}

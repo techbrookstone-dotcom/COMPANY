@@ -391,7 +391,7 @@ const faqs = [
   {
     question: "Which businesses do you work with?",
     answer:
-      "We work with startups, textile companies, retail stores, manufacturers, educational institutions, healthcare businesses and many other industries.",
+      "We work with Startups, Construction, Real estate, Parlour & Saloon, Manufacturers, Resorts, Turf, Showrooms, Job consultancy, Hospitals, Restaurants, Gym, Electronic Shops, Event management",
   },
   {
     question: "How do you measure campaign success?",
