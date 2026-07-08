@@ -1,9 +1,10 @@
 import heroImage from "@/assets/hero/hero-image.svg"; 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Share2, Search, MousePointerClick, Code2, Sparkles, PenTool,
-  BarChart3, Wallet, Zap, Heart, Phone, MapPin, Instagram, Facebook, ArrowRight,
+  BarChart3, Wallet, Zap, Heart, Phone, MapPin, Mail, Instagram, Facebook, ArrowRight,
   ChevronLeft, ChevronRight, Pause, Play,
 } from "lucide-react";
 import logo from "@/assets/brookstone-logo.jpeg";
@@ -369,73 +370,140 @@ export function CTABanner() {
 
 export function Contact() {
   return (
-    <section id="contact" className="py-20 md:py-28">
-      <div className="mx-auto max-w-5xl px-6">
-        <motion.div {...fadeUp} className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple">Contact</p>
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Get in <span className="text-gradient-brand">Touch</span>
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-slate-950 py-20 text-white md:py-28"
+    >
+      {/* Background Glow */}
+      <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
+      <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        <motion.div {...fadeUp} className="mx-auto mb-16 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-400">
+            Contact Us
+          </p>
+
+          <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            Let's Grow Your
+            <span className="text-gradient-brand"> Business Together</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">We'd love to hear about your project.</p>
+
+          <p className="mt-5 text-lg text-white/70">
+            Ready to increase your leads and grow your brand? Contact Brook Stone
+            Digital Solutions today for a free consultation.
+          </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <motion.a
-            {...fadeUp}
-            href="tel:+916383624245"
-            className="gradient-border flex items-start gap-4 p-7 transition-transform hover:-translate-y-1"
-          >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-purple text-white">
-              <Phone className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="font-bold">Phone</h3>
-              <p className="mt-1 text-muted-foreground">+91 63836 24245</p>
-            </div>
-          </motion.a>
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Contact Cards */}
+          <div className="space-y-6">
 
-          <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="gradient-border flex items-start gap-4 p-7">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-blue text-white">
-              <MapPin className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="font-bold">Address</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                402B 3rd Street, Kallakadu,<br />Verrapandi Post, Tiruppur
-              </p>
-            </div>
+            <motion.a
+              {...fadeUp}
+              href="tel:+916383624245"
+              className="flex items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-400"
+            >
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-brand">
+                <Phone className="h-7 w-7 text-white" />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold">Call Us</h3>
+                <p className="mt-1 text-white/70">
+                  +91 63836 24245
+                </p>
+              </div>
+            </motion.a>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ delay: 0.1 }}
+              className="flex items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+            >
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-brand">
+                <MapPin className="h-7 w-7 text-white" />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold">Visit Our Office</h3>
+
+                <p className="mt-2 text-white/70">
+                  402B 3rd Street,
+                  <br />
+                  Kallakadu,
+                  <br />
+                  Veerapandi,
+                  Tiruppur.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+            >
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-brand">
+                <Mail className="h-7 w-7 text-white" />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold">Email</h3>
+
+                <p className="mt-2 text-white/70">
+                  brookstonedigitalsolutions@gmail.com
+                </p>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* Google Map */}
+          <motion.div
+            {...fadeUp}
+            transition={{ delay: 0.2 }}
+            className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl"
+          >
+            <iframe
+              title="Brook Stone Digital Solutions"
+              src="https://www.google.com/maps?q=402B+3rd+Street+Kallakadu+Veerapandi+Tiruppur&output=embed"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              style={{ border: 0, minHeight: "430px" }}
+              allowFullScreen
+            />
           </motion.div>
         </div>
 
-        {/* Live map */}
-        <motion.div {...fadeUp} className="mt-8 overflow-hidden rounded-2xl shadow-brand gradient-border">
-          <iframe
-            title="Brook Stone Digital Solutions location"
-            src="https://www.google.com/maps?q=402B+3rd+Street+Kallakadu+Veerapandi+Tiruppur&output=embed"
-            width="100%"
-            height="320"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            style={{ border: 0, display: "block" }}
-            allowFullScreen
-          />
-        </motion.div>
-
-        <motion.div {...fadeUp} className="mt-10 flex justify-center gap-4">
+        {/* Social Icons */}
+        <motion.div
+          {...fadeUp}
+          className="mt-14 flex justify-center gap-5"
+        >
           {[
-            { Icon: Instagram, href: "https://www.instagram.com/brookstone.digitalsolutions/", label: "Instagram" },
-            { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583190211991", label: "Facebook" },
-            { Icon: XIcon, href: "https://x.com/BStone42646", label: "X" },
-          ].map(({ Icon, href, label }) => (
+            {
+              Icon: Instagram,
+              href: "https://www.instagram.com/brookstone.digitalsolutions/",
+            },
+            {
+              Icon: Facebook,
+              href: "https://www.facebook.com/profile.php?id=61583190211991",
+            },
+            {
+              Icon: XIcon,
+              href: "https://x.com/BStone42646",
+            },
+          ].map(({ Icon, href }, i) => (
             <a
-              key={label}
+              key={i}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={label}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-[0_8px_20px_-10px_rgba(123,44,191,0.4)] transition-all hover:scale-110 hover:bg-gradient-brand hover:text-white"
+              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-110 hover:bg-gradient-brand"
             >
-              <Icon className="h-5 w-5" />
+              <Icon className="h-6 w-6 text-white" />
             </a>
           ))}
         </motion.div>
@@ -446,40 +514,132 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-white/50 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        <div className="grid gap-8 md:grid-cols-3">
+    <footer className="relative overflow-hidden bg-slate-950 text-white">
+      {/* Background Glow */}
+      <div className="absolute -top-20 left-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="absolute bottom-0 right-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-12 md:grid-cols-3">
+
+          {/* Company */}
           <div>
-            <div className="flex items-center gap-2">
-              <img src={logo} alt="Brook Stone" className="h-9 w-9 rounded-full object-cover" />
-              <span className="font-display font-bold text-gradient-brand">Brook Stone</span>
+            <div className="flex items-center gap-3">
+              <img
+                src={logo}
+                alt="Brook Stone"
+                className="h-12 w-12 rounded-full ring-2 ring-blue-500/30"
+              />
+
+              <div>
+                <h3 className="text-xl font-bold text-white">
+                  Brook Stone
+                </h3>
+
+                <p className="text-sm text-blue-400">
+                  Digital Solutions
+                </p>
+              </div>
             </div>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Smart digital marketing solutions for ambitious brands.
+
+            <p className="mt-5 leading-7 text-white/70">
+              Helping businesses grow through SEO, Google Ads, Meta Ads,
+              Website Development and Social Media Marketing.
             </p>
           </div>
+
+          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold">Quick Links</h4>
-            <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              <li><a href="#about" className="hover:text-foreground">About</a></li>
-              <li><a href="#services" className="hover:text-foreground">Services</a></li>
-              <li><a href="#why" className="hover:text-foreground">Why Us</a></li>
-              <li><a href="#contact" className="hover:text-foreground">Contact</a></li>
+            <h4 className="mb-5 text-lg font-semibold">
+              Quick Links
+            </h4>
+
+            <ul className="space-y-3 text-white/70">
+              <li>
+                <a href="#home" className="transition hover:text-blue-400">
+                  Home
+                </a>
+              </li>
+
+              <li>
+                <a href="#about" className="transition hover:text-blue-400">
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a href="#services" className="transition hover:text-blue-400">
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <Link to="/pricing" className="transition hover:text-blue-400">
+  Pricing
+</Link>
+              </li>
+
+              <li>
+                <a href="#contact" className="transition hover:text-blue-400">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
+
+          {/* Contact */}
           <div>
-            <h4 className="font-semibold">Connect</h4>
-            <p className="mt-3 text-sm text-muted-foreground">📞 +91 63836 24245</p>
-            <p className="mt-1 text-sm text-muted-foreground">📍 Tiruppur, Tamil Nadu</p>
-            <div className="mt-3 flex gap-3">
-              <a href="https://www.instagram.com/brookstone.digitalsolutions/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-brand-purple"><Instagram className="h-5 w-5" /></a>
-              <a href="https://www.facebook.com/profile.php?id=61583190211991" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-brand-purple"><Facebook className="h-5 w-5" /></a>
-              <a href="https://x.com/BStone42646" target="_blank" rel="noopener noreferrer" aria-label="X" className="text-muted-foreground hover:text-brand-purple"><XIcon className="h-5 w-5" /></a>
+            <h4 className="mb-5 text-lg font-semibold">
+              Contact Info
+            </h4>
+
+            <div className="space-y-4 text-white/70">
+              <p>📞 +91 63836 24245</p>
+
+              <p>📧 brookstonedigitalsolutions@gmail.com</p>
+
+              <p>
+                📍 Tiruppur,
+                <br />
+                Tamil Nadu,
+                India
+              </p>
+            </div>
+
+            <div className="mt-6 flex gap-4">
+              <a
+                href="https://www.instagram.com/brookstone.digitalsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-110 hover:bg-gradient-brand"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=61583190211991"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-110 hover:bg-gradient-brand"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://x.com/BStone42646"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:scale-110 hover:bg-gradient-brand"
+              >
+                <XIcon className="h-5 w-5" />
+              </a>
             </div>
           </div>
+
         </div>
-        <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Brook Stone Digital Solutions. All rights reserved. 
+
+        <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/50">
+          © {new Date().getFullYear()} Brook Stone Digital Solutions. All Rights Reserved.
         </div>
       </div>
     </footer>
