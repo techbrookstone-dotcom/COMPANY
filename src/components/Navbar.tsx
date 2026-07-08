@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/brookstone-logo.jpeg";
 
+
 const links = [
   { href: "/#home", label: "Home" },
   { href: "/#about", label: "About" },

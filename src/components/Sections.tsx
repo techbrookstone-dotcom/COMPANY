@@ -1,12 +1,32 @@
-import heroImage from "@/assets/hero/hero-image.svg"; 
-import { motion } from "framer-motion";
+import heroImage from "@/assets/hero/hero-image.svg";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import {
-  Share2, Search, MousePointerClick, Code2, Sparkles, PenTool,
-  BarChart3, Wallet, Zap, Heart, Phone, MapPin, Mail, Instagram, Facebook, ArrowRight,
-  ChevronLeft, ChevronRight, Pause, Play,
+  Share2,
+  Search,
+  MousePointerClick,
+  Code2,
+  Sparkles,
+  PenTool,
+  BarChart3,
+  Wallet,
+  Zap,
+  Heart,
+  Phone,
+  MapPin,
+  Mail,
+  Instagram,
+  Facebook,
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  Play,
+  ChevronDown,
 } from "lucide-react";
+
 import logo from "@/assets/brookstone-logo.jpeg";
 import banner1 from "@/assets/no1-digital-marketing-company-tiruppur.jpeg";
 import banner2 from "@/assets/google-ads-management-website-development-tiruppur.jpeg";
@@ -400,39 +420,89 @@ const faqs = [
   },
 ];
 export function FAQ() {
-  return (
-    <section id="faq" className="bg-white py-20 md:py-28">
-      <div className="mx-auto max-w-4xl px-6">
+  const [open, setOpen] = useState(0);
 
-        <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-blue">
-            Frequently Asked Questions
+  return (
+    <section
+      id="faq"
+      className="relative overflow-hidden bg-slate-950 py-24 text-white"
+    >
+      {/* Background Glow */}
+      <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
+      <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-cyan-500/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-4xl px-6">
+
+        <div className="mb-16 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
+            FAQ
           </p>
 
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Got Questions?
-            <span className="text-gradient-brand"> We've Got Answers.</span>
+          <h2 className="text-4xl font-bold md:text-5xl">
+            Frequently Asked
+            <span className="text-gradient-brand"> Questions</span>
           </h2>
 
-          <p className="mt-5 text-lg text-muted-foreground">
-            Everything you need to know about our digital marketing services.
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/70">
+            Everything you need to know before growing your business with
+            Brook Stone Digital Solutions.
           </p>
         </div>
 
         <div className="space-y-5">
-          {faqs.map((faq) => (
-            <div
+          {faqs.map((faq, index) => (
+            <motion.div
               key={faq.question}
-              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-xl"
+              whileHover={{ y: -3 }}
+              transition={{ duration: 0.25 }}
+              className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl"
             >
-              <h3 className="text-lg font-semibold">
-                {faq.question}
-              </h3>
+              <button
+                onClick={() =>
+                  setOpen(open === index ? -1 : index)
+                }
+                className="flex w-full items-center justify-between p-7 text-left"
+              >
+                <h3 className="text-lg font-semibold">
+                  {faq.question}
+                </h3>
 
-              <p className="mt-3 leading-7 text-muted-foreground">
-                {faq.answer}
-              </p>
-            </div>
+                <motion.div
+                  animate={{
+                    rotate: open === index ? 180 : 0,
+                  }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <ChevronDown className="h-6 w-6 text-blue-400" />
+                </motion.div>
+              </button>
+
+              <AnimatePresence>
+                {open === index && (
+                  <motion.div
+                    initial={{
+                      height: 0,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      height: "auto",
+                      opacity: 1,
+                    }}
+                    exit={{
+                      height: 0,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      duration: 0.3,
+                    }}
+                  >
+                    <p className="px-7 pb-7 leading-8 text-white/70">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
 
