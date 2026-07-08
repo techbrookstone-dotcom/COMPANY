@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { FloatingButtons } from "@/components/FloatingButtons";
-import { Hero, About, Services, WhyUs, CTABanner, Contact, Footer } from "@/components/Sections";
+import { Hero, About, Services, WhyUs, CTABanner, Contact, Footer, FAQ } from "@/components/Sections";
 
 export default function Home() {
   return (
@@ -10,7 +10,8 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
-        <WhyUs />
+        <WhyUs /> 
+        <FAQ />
         <CTABanner />
         <Contact />
       </main>
