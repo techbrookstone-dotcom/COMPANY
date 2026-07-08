@@ -129,19 +129,19 @@ export function Hero() {
       {/* Hero Content */}
       <div className="absolute inset-0 z-20 flex items-center">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
-          <div className="max-w-3xl">
+          <div className="max-w-xl">
 
             <span className="mb-4 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
               🚀 Trusted by 40+ Businesses in Tamil Nadu
             </span>
 
-            <h1 className="text-2xl font-extrabold leading-tight text-white md:text-4xl">
+            <h1 className="max-w-xl text-3xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
   Grow Your Business with <br />
   <span className="text-blue-400">Digital Marketing</span> <br />
   That Delivers Results
 </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+            <p className="mt-6 max-w-lg text-base leading-7 text-gray-300 md:text-lg">
   Brook Stone Digital Solutions helps businesses increase leads, sales and brand visibility through
   <strong> SEO</strong>,
   <strong> Google Ads</strong>,
@@ -171,7 +171,7 @@ export function Hero() {
   <img
   src={heroImage}
   alt="Digital Marketing Illustration"
-  className="w-full max-w-2xl drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
+  className="w-full max-w-lg xl:max-w-xl drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
 />
 </div>
         </div>
