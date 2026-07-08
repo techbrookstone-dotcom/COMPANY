@@ -367,7 +367,79 @@ export function CTABanner() {
     </section>
   );
 }
+const faqs = [
+  {
+    question: "What digital marketing services do you offer?",
+    answer:
+      "We provide SEO, Google Ads, Meta Ads, Social Media Marketing, Website Development, Branding and Content Marketing for businesses of all sizes.",
+  },
+  {
+    question: "Why do businesses trust your agency?",
+    answer:
+      " We focus on transparency, creativity, and results-driven strategies that help businesses grow with confidence.",
+  },
+  {
+    question: "Do you manage Google Ads and Meta Ads?",
+    answer:
+      "Yes. We create, manage and optimize Google Ads and Facebook/Instagram Meta Ads campaigns to generate quality leads and maximize ROI.",
+  },
+  {
+    question: "Why should I invest in digital marketing?",
+    answer:
+      "Digital marketing turns online visibility into real business opportunities—helping you attract customers, increase engagement, and grow your brand faster and smarter.",
+  },
+  {
+    question: "Which businesses do you work with?",
+    answer:
+      "We work with startups, textile companies, retail stores, manufacturers, educational institutions, healthcare businesses and many other industries.",
+  },
+  {
+    question: "How do you measure campaign success?",
+    answer:
+      "We track key performance indicators (KPIs) such as reach, engagement, website traffic, lead quality, conversion rates, and return on ad spend (ROAS) to evaluate campaign effectiveness.",
+  },
+];
+export function FAQ() {
+  return (
+    <section id="faq" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-4xl px-6">
 
+        <div className="mb-14 text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-blue">
+            Frequently Asked Questions
+          </p>
+
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+            Got Questions?
+            <span className="text-gradient-brand"> We've Got Answers.</span>
+          </h2>
+
+          <p className="mt-5 text-lg text-muted-foreground">
+            Everything you need to know about our digital marketing services.
+          </p>
+        </div>
+
+        <div className="space-y-5">
+          {faqs.map((faq) => (
+            <div
+              key={faq.question}
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-xl"
+            >
+              <h3 className="text-lg font-semibold">
+                {faq.question}
+              </h3>
+
+              <p className="mt-3 leading-7 text-muted-foreground">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
 export function Contact() {
   return (
     <section
