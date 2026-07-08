@@ -128,20 +128,20 @@ export function Hero() {
 
       {/* Hero Content */}
       <div className="absolute inset-0 z-20 flex items-center pt-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
           <div className="max-w-xl">
 
-            <span className="mb-4 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
-              🚀 Trusted by 40+ Businesses in Tamil Nadu
-            </span>
+            <span className="mb-6 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
+  🚀 Trusted by 40+ Businesses in Tamil Nadu
+</span>
 
-            <h1 className="max-w-xl text-3xl font-bold leading-tight text-white text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="max-w-xl font-bold leading-tight text-white text-3xl md:text-4xl lg:text-5xl">
   Grow Your Business with <br />
   <span className="text-blue-400">Digital Marketing</span> <br />
   That Delivers Results
 </h1>
 
-            <p className="mt-6 max-w-lg text-base leading-7 text-gray-300 md:text-lg">
+            <p className="mt-8 max-w-lg text-base leading-7 text-gray-300 md:text-lg">
   Brook Stone Digital Solutions helps businesses increase leads, sales and brand visibility through
   <strong> SEO</strong>,
   <strong> Google Ads</strong>,
@@ -150,7 +150,7 @@ export function Hero() {
   <strong> Social Media Marketing</strong>.
 </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-5">
               <a
                 href="#contact"
                 className="rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700"
