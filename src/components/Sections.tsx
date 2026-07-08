@@ -107,7 +107,7 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section id="home" className="relative h-screen overflow-hidden">
+    <section id="home" className="relative min-h-screen overflow-hidden">
       {/* Banner Slider */}
       {/* Premium Animated Background */}
 <div className="absolute inset-0 -z-10 overflow-hidden bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#1e3a8a]">
@@ -128,8 +128,8 @@ export function Hero() {
 
       {/* Hero Content */}
       <div className="absolute inset-0 z-20 flex items-center pt-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
-          <div className="max-w-xl">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:gap-16 px-6 lg:grid-cols-2">
+          <div className="max-w-xl lg:max-w-2xl">
 
             <span className="mb-6 inline-block rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-300 backdrop-blur">
   🚀 Trusted by 40+ Businesses in Tamil Nadu
@@ -153,26 +153,25 @@ export function Hero() {
             <div className="mt-10 flex flex-wrap gap-5">
               <a
                 href="#contact"
-                className="rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white transition duration-300 hover:bg-blue-700"
+                className="rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-105 hover:shadow-xl"
               >
                 Get Free Consultation
               </a>
 
               <a
   href="#services"
-  className="rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur transition duration-300 hover:bg-white hover:text-black"
->
+  className="rounded-xl border border-white/20 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white/10 hover:border-blue-400">
   View Our Services
-</a>
+</a> 
             </div>
 
           </div>
           <div className="hidden lg:flex items-center justify-center">
   <img
-  src={heroImage}
-  alt="Digital Marketing Illustration"
-  className="w-full max-w-md xl:max-w-lg drop-shadow-[0_0_80px_rgba(59,130,246,0.35)] transition-transform duration-500 hover:scale-105"
-/>
+    src={heroImage}
+    alt="Digital Marketing Illustration"
+    className="w-full max-w-md xl:max-w-lg object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.25)] transition-transform duration-500 hover:scale-105"
+  />
 </div>
         </div>
       </div>
@@ -186,10 +185,11 @@ export function About() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <motion.div {...fadeUp}>
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-blue">About Us</p>
-            <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-              We craft <span className="text-gradient-brand">infinite</span> growth for ambitious brands.
+            <h2 className="max-w-xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+             Helping Businesses Grow with
+             <span className="text-gradient-brand"> Smart Digital Marketing</span>
             </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
+            <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
               Brook Stone Digital Solutions is a growth-focused digital marketing company in Tiruppur, blending creativity with analytics. 
               We partner with startups and established businesses to design strategies that turn clicks into customers and customers into loyal communities.
               </p>
@@ -201,11 +201,11 @@ export function About() {
             <div className="absolute inset-0 rounded-3xl bg-gradient-brand opacity-20 blur-2xl" />
             <div className="relative grid grid-cols-2 gap-4">
               {[
-                { k: "40+", v: "Projects Delivered" },
+                { k: "40+", v: "Projects Completed" },
                 { k: "20+", v: "Happy Clients" },
-                { k: "2x", v: "Average ROI Growth" },
-                { k: "24/7", v: "Support" },
-               ].map((s) => (
+                { k: "100%", v: "Custom Strategies" },
+                { k: "24/7", v: "Dedicated Support" },
+                ].map((s) => (
                 <div key={s.v} className="gradient-border p-6 text-center">
                   <div className="text-3xl font-bold text-gradient-brand">{s.k}</div>
                   <div className="mt-1 text-xs text-muted-foreground">{s.v}</div>
@@ -236,9 +236,14 @@ export function Services() {
       <div className="relative mx-auto max-w-6xl px-6">
         <motion.div {...fadeUp} className="mx-auto mb-14 max-w-2xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-purple-light">Services</p>
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Everything you need to <span className="text-gradient-brand">scale</span>
+          <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+           Digital Marketing Services That
+           <span className="text-gradient-brand"> Drive Real Business Growth</span>
           </h2>
+          <p className="mt-5 text-base leading-7 text-white/70 md:text-lg">
+           From SEO and Google Ads to Website Development and Social Media Marketing,
+           we help businesses attract more customers and grow faster.
+          </p>
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
@@ -248,13 +253,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-7 backdrop-blur transition-all hover:-translate-y-2 hover:border-brand-purple-light/50 hover:bg-white/10"
+              className="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-all duration-300 hover:-translate-y-3 hover:border-blue-400/50 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(59,130,246,0.25)]"
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-brand text-white shadow-brand">
-                <s.icon className="h-6 w-6" />
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-brand text-white shadow-lg shadow-blue-500/30">
+                <s.icon className="h-7 w-7" />
               </div>
-              <h3 className="text-lg font-bold text-white">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{s.desc}</p>
+              <h3 className="text-xl font-semibold text-white">{s.title}</h3>
+              <p className="mt-3 text-base leading-7 text-white/70">{s.desc}</p>
             </motion.div>
           ))}
         </div>
