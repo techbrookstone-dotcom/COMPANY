@@ -1,30 +1,68 @@
-import { Navbar } from "@/components/Navbar";
-import { FloatingButtons } from "@/components/FloatingButtons";
+import { lazy, Suspense } from "react";
 
+import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Services } from "@/components/Services";
-import { WhyUs } from "@/components/WhyUs";
-import { FAQ } from "@/components/FAQ";
-import { CTABanner } from "@/components/CTABanner";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
+
+const About = lazy(() =>
+  import("@/components/About").then((m) => ({ default: m.About }))
+);
+
+const Services = lazy(() =>
+  import("@/components/Services").then((m) => ({ default: m.Services }))
+);
+
+const WhyUs = lazy(() =>
+  import("@/components/WhyUs").then((m) => ({ default: m.WhyUs }))
+);
+
+const FAQ = lazy(() =>
+  import("@/components/FAQ").then((m) => ({ default: m.FAQ }))
+);
+
+const CTABanner = lazy(() =>
+  import("@/components/CTABanner").then((m) => ({ default: m.CTABanner }))
+);
+
+const Contact = lazy(() =>
+  import("@/components/Contact").then((m) => ({ default: m.Contact }))
+);
+
+const Footer = lazy(() =>
+  import("@/components/Footer").then((m) => ({ default: m.Footer }))
+);
+
+const FloatingButtons = lazy(() =>
+  import("@/components/FloatingButtons").then((m) => ({
+    default: m.FloatingButtons,
+  }))
+);
+
+function SectionLoader() {
+  return <div className="h-20" />;
+}
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
+
       <main>
         <Hero />
-        <About />
-        <Services />
-        <WhyUs /> 
-        <FAQ />
-        <CTABanner />
-        <Contact />
+
+        <Suspense fallback={<SectionLoader />}>
+          <About />
+          <Services />
+          <WhyUs />
+          <FAQ />
+          <CTABanner />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
-      <FloatingButtons />
+
+      <Suspense fallback={null}>
+        <Footer />
+        <FloatingButtons />
+      </Suspense>
     </div>
   );
 }
