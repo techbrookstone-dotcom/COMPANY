@@ -3,7 +3,7 @@ import { Check, Sparkles, ArrowRight, Camera, Zap, Crown, Rocket } from "lucide-
 import { Navbar } from "@/components/Navbar";
 import { FloatingButtons } from "@/components/FloatingButtons";
 import { Footer } from "@/components/Footer";
-import { CTABanner } from "@/components/CTA";
+import { CTABanner } from "@/components/CTABanner";
 
 type Plan = {
   name: string;

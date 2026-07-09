@@ -25,7 +25,7 @@ const Contact = lazy(() =>
 );
 
 const CTA = lazy(() =>
-  import("./CTA").then((module) => ({ default: module.CTABanner }))
+  import("./CTABanner").then((module) => ({ default: module.CTABanner }))
 );
 
 const Footer = lazy(() =>

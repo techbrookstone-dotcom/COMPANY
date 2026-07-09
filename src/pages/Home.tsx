@@ -6,7 +6,7 @@ import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { WhyUs } from "@/components/WhyUs";
 import { FAQ } from "@/components/FAQ";
-import { CTABanner } from "@/components/CTA";
+import { CTABanner } from "@/components/CTABanner";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
