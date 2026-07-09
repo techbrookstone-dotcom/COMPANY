@@ -1,6 +1,14 @@
 import { Navbar } from "@/components/Navbar";
 import { FloatingButtons } from "@/components/FloatingButtons";
-import { Hero, About, Services, WhyUs, CTABanner, Contact, Footer, FAQ } from "@/components/Sections";
+
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { WhyUs } from "@/components/WhyUs";
+import { FAQ } from "@/components/FAQ";
+import { CTABanner } from "@/components/CTA";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (

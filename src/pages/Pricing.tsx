@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { Check, Sparkles, ArrowRight, Camera, Zap, Crown, Rocket } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { FloatingButtons } from "@/components/FloatingButtons";
-import { Footer, CTABanner } from "@/components/Sections";
+import { Footer } from "@/components/Footer";
+import { CTABanner } from "@/components/CTA";
 
 type Plan = {
   name: string;
