@@ -122,7 +122,7 @@ export function Hero() {
       className="relative min-h-screen overflow-hidden"
     >
 
-      <HeroBannerSlider />
+      // <HeroBannerSlider />
 
 
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#020617]/90 via-[#0f172a]/70 to-[#1e3a8a]/40" />

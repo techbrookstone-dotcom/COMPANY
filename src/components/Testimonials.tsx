@@ -8,12 +8,12 @@ const reviews = [
       "Video quality, editing, creativity ellame excellent. Enga business-ku perfect-aana promotional video kuduthanga. Highly Recommended!",
   },
   {
-    name: "Manoj",
+    name: "Shivam Lottery",
     review:
       "Brook Stone Digital Solutions oda Website & Meta Ads service romba nalla irundhuchu. Enga business-ku quality leads vandhuchu. Team support-um excellent. Highly recommended!",
   },
   {
-    name: "Guna Sekar",
+    name: "Murugan Lottery",
     review:
       "Budget-friendly shoot team. Professional service. Highly recommended!",
   },
