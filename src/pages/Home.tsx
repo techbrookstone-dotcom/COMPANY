@@ -14,6 +14,9 @@ const Services = lazy(() =>
 const WhyUs = lazy(() =>
   import("@/components/WhyUs").then((m) => ({ default: m.WhyUs }))
 );
+const Testimonials = lazy(() =>
+  import("@/components/Testimonials").then((m) => ({ default: m.Testimonials }))
+);
 
 const FAQ = lazy(() =>
   import("@/components/FAQ").then((m) => ({ default: m.FAQ }))
@@ -52,7 +55,8 @@ export default function Home() {
         <Suspense fallback={<SectionLoader />}>
           <About />
           <Services />
-          <WhyUs />
+          <WhyUs /> 
+          <Testimonials /> 
           <FAQ />
           <CTABanner />
           <Contact />

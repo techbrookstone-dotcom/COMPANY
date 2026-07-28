@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { CTABanner } from "./CTABanner";
 
 const Hero = lazy(() =>
   import("./Hero").then((module) => ({ default: module.Hero }))
@@ -49,7 +50,7 @@ export function Sections() {
       <WhyUs />
       <FAQ />
       <Contact />
-      <CTA />
+      <CTABanner />
       <Footer />
     </Suspense>
   );
