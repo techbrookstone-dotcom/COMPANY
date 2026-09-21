@@ -5,7 +5,7 @@ function XIcon({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill="currentColor" 
       className={className}
       aria-hidden="true"
     >
@@ -76,7 +76,7 @@ export function Contact() {
                 <p className="mt-2 text-white/70">
                   402B 3rd Street,
                   <br />
-                  Kallakadu,
+                  Kallangadu,
                   <br />
                   Veerapandi,
                   Tiruppur.

@@ -96,7 +96,7 @@ export function Footer() {
             </h4>
 
             <div className="space-y-4 text-white/70">
-              <p>📞 +91 63836 24245</p>
+              <p>📞 +91 90037 85661</p>
 
               <p>📧 brookstonedigitalsolutions@gmail.com</p>
 
