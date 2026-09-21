@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-
+import  Chatbot  from "@/components/Chatbot";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 
@@ -60,6 +60,7 @@ export default function Home() {
           <FAQ />
           <CTABanner />
           <Contact />
+           <Chatbot />
         </Suspense>
       </main>
 
