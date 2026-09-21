@@ -46,7 +46,7 @@ export function Contact() {
 
             <motion.a
               {...fadeUp}
-              href="tel:+916383624245"
+              href="tel:+919003785661"
               className="flex items-center gap-5 rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-400"
             >
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-brand">
@@ -56,7 +56,7 @@ export function Contact() {
               <div>
                 <h3 className="text-xl font-semibold">Call Us</h3>
                 <p className="mt-1 text-white/70">
-                  +91 63836 24245
+                  +91 90037 85661 
                 </p>
               </div>
             </motion.a>
